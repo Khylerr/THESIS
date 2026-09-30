@@ -1,0 +1,40 @@
+{
+  "signer": "S01",
+  "sign": "hello",
+  "rep": 1,
+  "session": "20260930",
+  "glove_hand": "Right",
+  "saved_local": "2026-09-30T20:25:09",
+  "record_sec": 4.0,
+  "countdown_sec": 3.0,
+  "flipped_before_processing": true,
+  "clock": "time.perf_counter",
+  "record_start_perf_counter": 1031314.2435764,
+  "record_end_perf_counter": 1031318.2646034,
+  "camera_requested": {
+    "width": 640,
+    "height": 480,
+    "fps": 30
+  },
+  "camera_reported": {
+    "width": 640.0,
+    "height": 480.0,
+    "fps": 30.0
+  },
+  "mediapipe_version": "0.10.21",
+  "mediapipe_settings": {
+    "max_num_hands": 2,
+    "model_complexity": 0,
+    "min_detection_confidence": 0.5,
+    "min_tracking_confidence": 0.5
+  },
+  "opencv_version": "4.11.0",
+  "columns": 131,
+  "quality": {
+    "n_frames": 109,
+    "fps": 27.35,
+    "detected_frac": 1.0,
+    "max_gap_sec": 0.0455,
+    "warnings": []
+  }
+}

@@ -3,10 +3,15 @@ import mediapipe as mp
 mp_drawing = mp.solutions.drawing_utils
 mp_drawing_styles = mp.solutions.drawing_styles
 mp_hands = mp.solutions.hands
+import time
 
 
 # For webcam input:
 cap = cv2.VideoCapture(0)
+cap.set(cv2.CAP_PROP_FPS, 30)  # Set FPS to 30 for consistent timestamping
+cap.set(cv2.CAP_PROP_FRAME_WIDTH, 640)
+cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 480)
+
 with mp_hands.Hands(
     model_complexity=0,
     min_detection_confidence=0.5,
@@ -41,3 +46,10 @@ with mp_hands.Hands(
     if cv2.waitKey(5) & 0xFF == 27:
       break
 cap.release()
+
+
+def countdown(seconds):
+    for i in range(seconds, 0, -1):
+        print(f"Starting in {i} seconds...", end="\r")
+        time.sleep(1)
+    print("Starting now!            ")

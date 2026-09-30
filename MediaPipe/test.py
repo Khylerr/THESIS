@@ -18,7 +18,7 @@ HANDEDNESS_TEXT_COLOR = (88, 205, 54)  # vibrant green
 
 BASE_DIR = r'C:\Users\Khyler\Desktop\THESIS\MediaPipe'
 MODEL_PATH = os.path.join(BASE_DIR, 'hand_landmarker.task')
-IMAGE_PATH = os.path.join(BASE_DIR, 'C:\\Users\\Khyler\\Desktop\\THESIS\\MediaPipe\\images\\rhine.png')  
+IMAGE_PATH = os.path.join(BASE_DIR, 'C:\\Users\\Khyler\\Desktop\\THESIS\\MediaPipe\\images\\glove2jpg')  
 
 
 def draw_landmarks_on_image(rgb_image, detection_result):
@@ -65,7 +65,7 @@ def main():
 
     # STEP 2: Create a HandLandmarker object.
     base_options = python.BaseOptions(model_asset_path=MODEL_PATH)
-    options = vision.HandLandmarkerOptions(base_options=base_options, num_hands=2)
+    options = vision.HandLandmarkerOptions(base_options=base_options, num_hands=2, min_hand_detection_confidence=0.3)
     detector = vision.HandLandmarker.create_from_options(options)
 
     # STEP 3: Load the input image.
