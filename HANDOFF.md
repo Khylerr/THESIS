@@ -149,7 +149,7 @@ Xiaomi devices: Developer options → enable **Install via USB** or installs fai
   (fist during calibration not tight on F3, or sensor shifts) — recalibrate with a tight fist;
   F1/F2/F4 hit a constant max in the fist (likely ADC saturation) → ~1.0, fine.
 - Git: branch **`android-app` on GitHub** (`Khylerr/THESIS`, commit `cb487f85`, based on GitHub
-  `main` incl. Paulo's `ble` commit) — open a PR to merge. **`MediaPipe/venv` is tracked in git**
+  `main` incl. Paulo's `ble` commit) — **PR #1** https://github.com/Khylerr/THESIS/pull/1 (open). **`MediaPipe/venv` is tracked in git**
   (6.5k files); local venv upgrades (opencv 5, jaxlib) have files > 100 MB that GitHub rejects,
   so on JP's PC the venv is hidden from git (`skip-worktree` + `.git/info/exclude`). Never commit
   the venv; long-term, remove it from the repo (team decision: `git pull` would delete it locally).
