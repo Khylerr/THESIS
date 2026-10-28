@@ -148,10 +148,13 @@ Xiaomi devices: Developer options → enable **Install via USB** or installs fai
   calibrated range only 358 counts** but reached ~1500 while signing → normalized F3 up to 3.4
   (fist during calibration not tight on F3, or sensor shifts) — recalibrate with a tight fist;
   F1/F2/F4 hit a constant max in the fist (likely ADC saturation) → ~1.0, fine.
-- Git: branch `android-app` pushed to GitHub (`Khylerr/THESIS`): app + parity, device fixes,
-  1 hand + spec v2 + handoff, two-point flex calibration (spec v3). Not merged into `main`.
-  GitHub `main` has Paulo's `ble` commit (BLE firmware) that local `main` lacks, and local `main`
-  has 2 unpushed commits — reconcile carefully before merging. Uncommitted: `hardware/` (Sol).
+- Git: branch **`android-app` on GitHub** (`Khylerr/THESIS`, commit `cb487f85`, based on GitHub
+  `main` incl. Paulo's `ble` commit) — open a PR to merge. **`MediaPipe/venv` is tracked in git**
+  (6.5k files); local venv upgrades (opencv 5, jaxlib) have files > 100 MB that GitHub rejects,
+  so on JP's PC the venv is hidden from git (`skip-worktree` + `.git/info/exclude`). Never commit
+  the venv; long-term, remove it from the repo (team decision: `git pull` would delete it locally).
+  Local `main` has 2 old unpushed commits (venv + S01 takes, already contained in `android-app`);
+  backup of the pre-squash branch: local `android-app-backup-with-venv`. Uncommitted: `hardware/` (Sol).
   APK for sharing: `D:\College\Thesis\AISL-A_app_2026-10-28.apk` (debug build, not in git).
 
 ## 6. Next steps (in order)
@@ -305,3 +308,5 @@ landmarks, F1–F5, acc, gyro). `MediaPipe/data/S01/S01_home_rep04.csv` has glov
   Python + Kotlin together, golden regenerated, 11/11 parity tests (new: calibration cases).
 - 2026-10-28 — First glove-worn, calibrated phone takes (Nothing A059): sync and IMU good;
   F3 calibration too small; ~21 fps on that phone. Pulled to `MediaPipe/data_phone_nothing/`.
+- 2026-10-28 — Pushed `android-app` to GitHub as one clean commit on top of GitHub `main`
+  (the old local commits carried a venv with > 100 MB files that GitHub rejected).
