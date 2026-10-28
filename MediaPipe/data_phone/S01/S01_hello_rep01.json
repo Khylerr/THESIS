@@ -1,0 +1,134 @@
+{
+  "platform": "android",
+  "signer": "S01",
+  "sign": "hello",
+  "rep": 1,
+  "session": "20261028",
+  "glove_hand": "Right",
+  "saved_local": "2026-10-28T12:56:56",
+  "record_sec": 4,
+  "countdown_sec": 3,
+  "flipped_before_processing": true,
+  "clock": "SystemClock.elapsedRealtimeNanos (seconds)",
+  "record_start_clock_sec": 5178.503903128,
+  "record_end_clock_sec": 5182.522332383,
+  "camera_requested": {
+    "width": 640,
+    "height": 480,
+    "fps": 30
+  },
+  "camera_reported": {
+    "width": 640,
+    "height": 480,
+    "fps_range": "[30, 30]"
+  },
+  "mediapipe_input": {
+    "width": 640,
+    "height": 480,
+    "rotation_degrees": 0,
+    "mirrored": true
+  },
+  "camera": {
+    "lens": "front",
+    "frame_timestamp": "sensor timestamp (start of exposure) on elapsedRealtimeNanos",
+    "sensor_timestamp_source": "REALTIME",
+    "timestamp_fallback_frames": 0,
+    "capture_to_analyzer_ms": {
+      "median": 121.2,
+      "p95": 141.1,
+      "max": 160
+    },
+    "frames_skipped_method": "estimated from sensor timestamp gaps at 30.0 fps"
+  },
+  "device": {
+    "manufacturer": "Xiaomi",
+    "model": "23043RP34G",
+    "android_sdk": 34
+  },
+  "glove": {
+    "transport": "ble",
+    "device": "AISL_Glove",
+    "ble_mtu": 100,
+    "columns": [
+      "flex1",
+      "flex2",
+      "flex3",
+      "flex4",
+      "flex5",
+      "acc_x",
+      "acc_y",
+      "acc_z",
+      "gyro_x",
+      "gyro_y",
+      "gyro_z"
+    ],
+    "timestamp": "ESP32 millis() per sample, mapped to the phone clock (elapsedRealtimeNanos) via the minimum (arrival - device time) over a 10 s sliding window",
+    "units": "flex: ADC counts minus calibration baseline; acc: m/s^2; gyro: rad/s",
+    "sync_method": "AsofJoin.nearest (Kotlin port of pandas.merge_asof, golden-tested)",
+    "sync_direction": "nearest",
+    "sync_tolerance_sec": 0.04,
+    "calibration": "",
+    "round_trip_latency_session": {
+      "n": 30,
+      "sent": 30,
+      "min_ms": 14,
+      "median_ms": 24.8,
+      "p95_ms": 25.4,
+      "max_ms": 27.3,
+      "one_way_est_ms": 12.4
+    },
+    "packets_dropped_session": 0,
+    "malformed_packets_session": 0,
+    "last_status_line": ""
+  },
+  "feature_spec_version": 1,
+  "mediapipe_version": "0.10.14",
+  "mediapipe_settings": {
+    "api": "MediaPipe Tasks HandLandmarker",
+    "model_file": "hand_landmarker.task",
+    "running_mode": "VIDEO",
+    "delegate": "CPU",
+    "num_hands": 1,
+    "min_hand_detection_confidence": 0.4,
+    "min_hand_presence_confidence": 0.4,
+    "min_tracking_confidence": 0.4,
+    "input_mirrored": true,
+    "invert_handedness_label": true,
+    "model_sha256": "fbc2a30080c3c557093b5ddfc334698132eb341044ccee322ccf8bcf3607cde1"
+  },
+  "hand_mode": "assume",
+  "quality": {
+    "n_frames": 112,
+    "fps": 28.22,
+    "detected_frac": 1,
+    "max_gap_sec": 0.0667,
+    "glove_samples": 200,
+    "glove_hz": 50,
+    "glove_matched_frac": 1,
+    "glove_max_gap_sec": 0.02,
+    "glove_max_abs_dt_ms": 9.4,
+    "glove_packets_dropped": 0,
+    "glove_delay_above_min": {
+      "median_ms": 6.5,
+      "p95_ms": 12,
+      "max_ms": 26.5
+    },
+    "vision_latency": {
+      "n_frames": 112,
+      "median_ms": 32,
+      "p95_ms": 54.9,
+      "max_ms": 63.3,
+      "within_20ms_frac": 0,
+      "camera_frames_skipped": 7
+    },
+    "hand_picking": {
+      "mode": "assume",
+      "mediapipe_label_mismatch_frac": 0.9115
+    },
+    "warnings": [
+      "vision 32 ms/frame (> 20)"
+    ]
+  },
+  "columns": 79,
+  "note": "other-hand columns removed after recording (spec v2, one-handed)"
+}
