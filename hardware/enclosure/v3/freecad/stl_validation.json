@@ -1,0 +1,26 @@
+{
+  "01_base.stl": {
+    "triangles": 4196,
+    "dimensions_mm": [
+      98.0,
+      58.9,
+      27.0
+    ],
+    "minimum_z_mm": -0.0,
+    "unpaired_or_nonmanifold_edges": 0,
+    "degenerate_triangles": 0,
+    "volume_mm3": 36256.059
+  },
+  "02_lid.stl": {
+    "triangles": 7728,
+    "dimensions_mm": [
+      74.0,
+      58.9,
+      6.4
+    ],
+    "minimum_z_mm": -0.0,
+    "unpaired_or_nonmanifold_edges": 0,
+    "degenerate_triangles": 0,
+    "volume_mm3": 11464.247
+  }
+}

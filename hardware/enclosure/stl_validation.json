@@ -1,0 +1,50 @@
+{
+  "01_base.stl": {
+    "triangles": 6724,
+    "dimensions_mm": [
+      90.0,
+      84.0,
+      27.2
+    ],
+    "minimum_z_mm": 0.0,
+    "unpaired_or_nonmanifold_edges": 0,
+    "degenerate_triangles": 0,
+    "volume_mm3": 39092.71
+  },
+  "02_lid.stl": {
+    "triangles": 21554,
+    "dimensions_mm": [
+      90.0,
+      60.0,
+      4.6
+    ],
+    "minimum_z_mm": -2e-06,
+    "unpaired_or_nonmanifold_edges": 0,
+    "degenerate_triangles": 0,
+    "volume_mm3": 14352.488
+  },
+  "03_carrier.stl": {
+    "triangles": 8258,
+    "dimensions_mm": [
+      76.0,
+      43.0,
+      15.0
+    ],
+    "minimum_z_mm": 0.0,
+    "unpaired_or_nonmanifold_edges": 0,
+    "degenerate_triangles": 0,
+    "volume_mm3": 9217.076
+  },
+  "04_imu_shelf.stl": {
+    "triangles": 7572,
+    "dimensions_mm": [
+      24.0,
+      43.2,
+      3.6
+    ],
+    "minimum_z_mm": 0.0,
+    "unpaired_or_nonmanifold_edges": 0,
+    "degenerate_triangles": 0,
+    "volume_mm3": 1333.604
+  }
+}

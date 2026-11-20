@@ -1,0 +1,17 @@
+<resources>
+    <!-- Inference screen (light) -->
+    <color name="inf_bg">#F3F4F7</color>
+    <color name="inf_card">#FFFFFF</color>
+    <color name="inf_stroke">#DFE3EA</color>
+    <color name="inf_text">#14171C</color>
+    <color name="inf_text2">#5B6472</color>
+    <color name="inf_accent">#2459E0</color>
+    <color name="inf_on_accent">#FFFFFF</color>
+    <color name="inf_ok">#1A8F4E</color>
+    <color name="inf_warn">#B86E00</color>
+    <color name="inf_bad">#C93636</color>
+    <color name="inf_idle">#8A93A1</color>
+    <color name="inf_track">#E6E9EF</color>
+    <color name="inf_bar">#9AA6BA</color>
+    <color name="inf_disabled">#C9CED8</color>
+</resources>

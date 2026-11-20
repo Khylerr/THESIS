@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "aisl")(type "KiCad")(uri "${KIPRJMOD}/lib/aisl.kicad_sym")(options "")(descr "AISL-A glove carrier: DevKit and MPU6050 module symbols"))
+)

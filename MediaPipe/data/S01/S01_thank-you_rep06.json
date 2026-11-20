@@ -1,0 +1,102 @@
+{
+  "signer": "S01",
+  "sign": "thank-you",
+  "rep": 6,
+  "session": "20261014",
+  "glove_hand": "Right",
+  "saved_local": "2026-10-14T14:11:12",
+  "record_sec": 4.0,
+  "countdown_sec": 3.0,
+  "flipped_before_processing": true,
+  "clock": "time.perf_counter",
+  "record_start_perf_counter": 173278.1029095,
+  "record_end_perf_counter": 173282.1311792,
+  "camera_requested": {
+    "width": 640,
+    "height": 480,
+    "fps": 30
+  },
+  "camera_reported": {
+    "width": 640.0,
+    "height": 480.0,
+    "fps": 30.00003000003
+  },
+  "glove": {
+    "transport": "ble",
+    "device": "AISL_Glove",
+    "ble_mtu": 23,
+    "columns": [
+      "flex1",
+      "flex2",
+      "flex3",
+      "flex4",
+      "flex5",
+      "acc_x",
+      "acc_y",
+      "acc_z",
+      "gyro_x",
+      "gyro_y",
+      "gyro_z"
+    ],
+    "timestamp": "ESP32 millis() per sample, mapped to PC time.perf_counter via the minimum (arrival - device time) over a 10 s sliding window",
+    "units": "flex: ADC counts minus calibration baseline; acc: m/s^2; gyro: rad/s",
+    "sync_method": "pandas.merge_asof",
+    "sync_direction": "nearest",
+    "sync_tolerance_sec": 0.04,
+    "calibration": "",
+    "round_trip_latency_session": {
+      "n": 30,
+      "sent": 30,
+      "min_ms": 16.4,
+      "median_ms": 17.1,
+      "p95_ms": 25.1,
+      "max_ms": 25.4,
+      "one_way_est_ms": 8.6
+    },
+    "packets_dropped_session": 0,
+    "malformed_packets_session": 0,
+    "last_status_line": "MPU:MISSING (sending zeros for accel/gyro)"
+  },
+  "mediapipe_version": "0.10.14",
+  "mediapipe_settings": {
+    "max_num_hands": 2,
+    "model_complexity": 0,
+    "min_detection_confidence": 0.4,
+    "min_tracking_confidence": 0.4
+  },
+  "hand_mode": "assume",
+  "camera_backend": "dshow",
+  "opencv_version": "5.0.0",
+  "pandas_version": "3.0.6",
+  "columns": 143,
+  "quality": {
+    "n_frames": 120,
+    "fps": 30.11,
+    "detected_frac": 1.0,
+    "max_gap_sec": 0.0478,
+    "glove_samples": 200,
+    "glove_hz": 50.0,
+    "glove_matched_frac": 1.0,
+    "glove_max_gap_sec": 0.02,
+    "glove_max_abs_dt_ms": 9.1,
+    "glove_packets_dropped": 0,
+    "glove_delay_above_min": {
+      "median_ms": 3.1,
+      "p95_ms": 12.8,
+      "max_ms": 20.0
+    },
+    "vision_latency": {
+      "n_frames": 120,
+      "median_ms": 16.0,
+      "p95_ms": 20.5,
+      "max_ms": 26.2,
+      "within_20ms_frac": 0.8833,
+      "camera_frames_skipped": 0
+    },
+    "hand_picking": {
+      "mode": "assume",
+      "mediapipe_label_mismatch_frac": 0.0
+    },
+    "warnings": []
+  }
+}

@@ -1,0 +1,305 @@
+{
+  "date": "2026-11-07",
+  "source": "D:\\College\\Thesis\\THESIS\\hardware\\enclosure\\v2\\AISL-A_Enclosure_V2.blend",
+  "resolution": [
+    2400,
+    1600
+  ],
+  "source_fingerprints": {
+    "V2_01_BASE": "9e37e01c814d185f23f7624c892db0dfbdac2a8c9d9a9e024da4ec6b38f10436",
+    "V2_02_LID": "0411cbbc4aacd901f78b17ab715df2c546422287602af71ef44ed9362a038a36",
+    "V2_03_PERFBOARD_CRADLE": "9ef22109456a62594a9f8c2874b61b0587f4960d8e6ce10893b734209f0360b5"
+  },
+  "body_mm": [
+    122,
+    86,
+    42
+  ],
+  "overall_mm": [
+    146,
+    86,
+    42
+  ],
+  "views": {
+    "01_assembled": {
+      "scene": "REPORT 2026-11-07 | 01_assembled",
+      "camera": [
+        180.0,
+        -190.0,
+        175.0
+      ],
+      "ortho_scale": 207.79891967773438,
+      "objects": [
+        "V2_01_BASE",
+        "V2_02_LID",
+        "V2_03_PERFBOARD_CRADLE",
+        "V2 REF assembled perfboard 90 x 60",
+        "V2 REF female socket",
+        "V2 REF solder pin envelope",
+        "V2 REF female socket.001",
+        "V2 REF solder pin envelope.001",
+        "V2 REF ESP32 at upper right",
+        "V2 REF ESP32 shield",
+        "V2 REF USB connector at board edge",
+        "V2 REF approximate button",
+        "V2 REF approximate button.001",
+        "V2 REF overhanging MPU6050",
+        "V2 REF MPU IC",
+        "V2 REF MPU header support",
+        "V2 REF divider resistor",
+        "V2 REF divider capacitor",
+        "V2 REF divider resistor.001",
+        "V2 REF divider capacitor.001",
+        "V2 REF divider resistor.002",
+        "V2 REF divider capacitor.002",
+        "V2 REF divider resistor.003",
+        "V2 REF divider capacitor.003",
+        "V2 REF divider resistor.004",
+        "V2 REF divider capacitor.004"
+      ]
+    },
+    "02_exploded": {
+      "scene": "REPORT 2026-11-07 | 02_exploded",
+      "camera": [
+        185.0,
+        -205.0,
+        225.0
+      ],
+      "ortho_scale": 348.25860595703125,
+      "objects": [
+        "V2_01_BASE",
+        "V2_02_LID",
+        "V2_03_PERFBOARD_CRADLE",
+        "V2 REF assembled perfboard 90 x 60",
+        "V2 REF female socket",
+        "V2 REF solder pin envelope",
+        "V2 REF female socket.001",
+        "V2 REF solder pin envelope.001",
+        "V2 REF ESP32 at upper right",
+        "V2 REF ESP32 shield",
+        "V2 REF USB connector at board edge",
+        "V2 REF approximate button",
+        "V2 REF approximate button.001",
+        "V2 REF overhanging MPU6050",
+        "V2 REF MPU IC",
+        "V2 REF MPU header support",
+        "V2 REF divider resistor",
+        "V2 REF divider capacitor",
+        "V2 REF divider resistor.001",
+        "V2 REF divider capacitor.001",
+        "V2 REF divider resistor.002",
+        "V2 REF divider capacitor.002",
+        "V2 REF divider resistor.003",
+        "V2 REF divider capacitor.003",
+        "V2 REF divider resistor.004",
+        "V2 REF divider capacitor.004"
+      ]
+    },
+    "03_internal_layout": {
+      "scene": "REPORT 2026-11-07 | 03_internal_layout",
+      "camera": [
+        110.0,
+        -155.0,
+        225.0
+      ],
+      "ortho_scale": 250.7364044189453,
+      "objects": [
+        "V2_01_BASE",
+        "V2_03_PERFBOARD_CRADLE",
+        "V2 REF assembled perfboard 90 x 60",
+        "V2 REF female socket",
+        "V2 REF solder pin envelope",
+        "V2 REF female socket.001",
+        "V2 REF solder pin envelope.001",
+        "V2 REF ESP32 at upper right",
+        "V2 REF ESP32 shield",
+        "V2 REF USB connector at board edge",
+        "V2 REF approximate button",
+        "V2 REF approximate button.001",
+        "V2 REF overhanging MPU6050",
+        "V2 REF MPU IC",
+        "V2 REF MPU header support",
+        "V2 REF divider resistor",
+        "V2 REF divider capacitor",
+        "V2 REF divider resistor.001",
+        "V2 REF divider capacitor.001",
+        "V2 REF divider resistor.002",
+        "V2 REF divider capacitor.002",
+        "V2 REF divider resistor.003",
+        "V2 REF divider capacitor.003",
+        "V2 REF divider resistor.004",
+        "V2 REF divider capacitor.004"
+      ]
+    },
+    "04_usb_end": {
+      "scene": "REPORT 2026-11-07 | 04_usb_end",
+      "camera": [
+        235.0,
+        65.0,
+        105.0
+      ],
+      "ortho_scale": 167.62939453125,
+      "objects": [
+        "V2_01_BASE",
+        "V2_02_LID",
+        "V2_03_PERFBOARD_CRADLE",
+        "V2 REF assembled perfboard 90 x 60",
+        "V2 REF female socket",
+        "V2 REF solder pin envelope",
+        "V2 REF female socket.001",
+        "V2 REF solder pin envelope.001",
+        "V2 REF ESP32 at upper right",
+        "V2 REF ESP32 shield",
+        "V2 REF USB connector at board edge",
+        "V2 REF approximate button",
+        "V2 REF approximate button.001",
+        "V2 REF overhanging MPU6050",
+        "V2 REF MPU IC",
+        "V2 REF MPU header support",
+        "V2 REF divider resistor",
+        "V2 REF divider capacitor",
+        "V2 REF divider resistor.001",
+        "V2 REF divider capacitor.001",
+        "V2 REF divider resistor.002",
+        "V2 REF divider capacitor.002",
+        "V2 REF divider resistor.003",
+        "V2 REF divider capacitor.003",
+        "V2 REF divider resistor.004",
+        "V2 REF divider capacitor.004"
+      ]
+    },
+    "05_imu_end": {
+      "scene": "REPORT 2026-11-07 | 05_imu_end",
+      "camera": [
+        -235.0,
+        65.0,
+        105.0
+      ],
+      "ortho_scale": 167.62939453125,
+      "objects": [
+        "V2_01_BASE",
+        "V2_02_LID",
+        "V2_03_PERFBOARD_CRADLE",
+        "V2 REF assembled perfboard 90 x 60",
+        "V2 REF female socket",
+        "V2 REF solder pin envelope",
+        "V2 REF female socket.001",
+        "V2 REF solder pin envelope.001",
+        "V2 REF ESP32 at upper right",
+        "V2 REF ESP32 shield",
+        "V2 REF USB connector at board edge",
+        "V2 REF approximate button",
+        "V2 REF approximate button.001",
+        "V2 REF overhanging MPU6050",
+        "V2 REF MPU IC",
+        "V2 REF MPU header support",
+        "V2 REF divider resistor",
+        "V2 REF divider capacitor",
+        "V2 REF divider resistor.001",
+        "V2 REF divider capacitor.001",
+        "V2 REF divider resistor.002",
+        "V2 REF divider capacitor.002",
+        "V2 REF divider resistor.003",
+        "V2 REF divider capacitor.003",
+        "V2 REF divider resistor.004",
+        "V2 REF divider capacitor.004"
+      ]
+    },
+    "06_top_orthographic": {
+      "scene": "REPORT 2026-11-07 | 06_top_orthographic",
+      "camera": [
+        0.0,
+        0.0,
+        300.0
+      ],
+      "ortho_scale": 190.0,
+      "objects": [
+        "V2_01_BASE",
+        "V2_02_LID",
+        "V2_03_PERFBOARD_CRADLE"
+      ]
+    },
+    "06_front_orthographic": {
+      "scene": "REPORT 2026-11-07 | 06_front_orthographic",
+      "camera": [
+        0.0,
+        -300.0,
+        21.0
+      ],
+      "ortho_scale": 190.0,
+      "objects": [
+        "V2_01_BASE",
+        "V2_02_LID",
+        "V2_03_PERFBOARD_CRADLE"
+      ]
+    }
+  },
+  "top_points": {
+    "overall_left": [
+      277.8947,
+      800.0
+    ],
+    "overall_right": [
+      2122.1053,
+      800.0
+    ],
+    "body_left": [
+      429.4737,
+      800.0
+    ],
+    "body_right": [
+      1970.5263,
+      800.0
+    ],
+    "width_top": [
+      1200.0,
+      256.8421
+    ],
+    "width_bottom": [
+      1200.0,
+      1343.1579
+    ],
+    "body_tl": [
+      429.4737,
+      256.8421
+    ],
+    "body_tr": [
+      1970.5263,
+      256.8421
+    ],
+    "body_bl": [
+      429.4737,
+      1343.1579
+    ],
+    "body_br": [
+      1970.5263,
+      1343.1579
+    ],
+    "left_slot": [
+      353.6842,
+      800.0
+    ],
+    "right_slot": [
+      2046.3158,
+      800.0
+    ]
+  },
+  "front_points": {
+    "height_bottom": [
+      1970.5263,
+      1065.2637
+    ],
+    "height_top": [
+      1970.5263,
+      534.7374
+    ],
+    "body_left": [
+      429.4737,
+      1065.2637
+    ],
+    "body_right": [
+      1970.5263,
+      1065.2637
+    ]
+  }
+}
