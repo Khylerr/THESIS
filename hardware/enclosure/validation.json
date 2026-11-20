@@ -1,0 +1,125 @@
+{
+  "units": "millimetres",
+  "status": "nominal fit prototype, physical validation pending",
+  "contact_face_separation_for_boolean_mm": 0.02,
+  "parts": {
+    "01_BASE": {
+      "dimensions_mm": [
+        90.0,
+        84.0,
+        27.2
+      ],
+      "vertices": 3354,
+      "faces": 6724,
+      "non_manifold_edges": 0,
+      "boundary_edges": 0,
+      "connected_components": 1,
+      "volume_mm3": 39092.71
+    },
+    "02_LID": {
+      "dimensions_mm": [
+        90.0,
+        60.0,
+        4.6
+      ],
+      "vertices": 10767,
+      "faces": 21554,
+      "non_manifold_edges": 0,
+      "boundary_edges": 0,
+      "connected_components": 1,
+      "volume_mm3": 14352.488
+    },
+    "03_CARRIER": {
+      "dimensions_mm": [
+        76.0,
+        43.0,
+        15.0
+      ],
+      "vertices": 4115,
+      "faces": 8258,
+      "non_manifold_edges": 0,
+      "boundary_edges": 0,
+      "connected_components": 1,
+      "volume_mm3": 9217.077
+    },
+    "04_IMU_SHELF": {
+      "dimensions_mm": [
+        24.0,
+        43.2,
+        3.6
+      ],
+      "vertices": 3780,
+      "faces": 7572,
+      "non_manifold_edges": 0,
+      "boundary_edges": 0,
+      "connected_components": 1,
+      "volume_mm3": 1333.604
+    }
+  },
+  "assembly_intersections_mm3": {
+    "01_BASE / 02_LID": 0.0,
+    "01_BASE / 03_CARRIER": 0.0,
+    "01_BASE / 04_IMU_SHELF": 0.0,
+    "02_LID / 03_CARRIER": 0.0,
+    "02_LID / 04_IMU_SHELF": 0.0,
+    "03_CARRIER / 04_IMU_SHELF": 0.0
+  },
+  "nominal_clearances_mm": {
+    "lid_per_side": 0.3,
+    "usb_opening_y": 26.0,
+    "usb_opening_z": 16.0,
+    "button_opening_x": 16.0,
+    "button_opening_y": 10.0,
+    "sensor_notch_y": 22,
+    "sensor_notch_z": 6,
+    "strap_slot_x": 26,
+    "strap_slot_y": 6
+  },
+  "parameters_mm": {
+    "length": 90.0,
+    "width": 60.0,
+    "height": 30.0,
+    "corner": 6.0,
+    "wall": 2.4,
+    "floor": 2.4,
+    "lid": 2.8,
+    "lid_gap": 0.3,
+    "lip_depth": 1.8,
+    "strap_clear_width": 26.0,
+    "strap_clear_depth": 6.0,
+    "m3_clearance": 3.4,
+    "m3_pilot": 2.6,
+    "m25_clearance": 2.8,
+    "m25_pilot": 2.0,
+    "usb_width": 26.0,
+    "usb_height": 16.0,
+    "button_length": 16.0,
+    "button_width": 10.0
+  },
+  "nominal_reference_intersections_mm3": {
+    "REF ESP32 PCB 54.4 x 27.9": {
+      "01_BASE": 0.0,
+      "02_LID": 0.0,
+      "03_CARRIER": 0.0,
+      "04_IMU_SHELF": 0.0
+    },
+    "REF USB shell envelope": {
+      "01_BASE": 0.0,
+      "02_LID": 0.0,
+      "03_CARRIER": 0.0,
+      "04_IMU_SHELF": 0.0
+    },
+    "REF divider perfboard 18 x 30": {
+      "01_BASE": 0.0,
+      "02_LID": 0.0,
+      "03_CARRIER": 0.0,
+      "04_IMU_SHELF": 0.0
+    },
+    "REF MPU6050 envelope 20.3 x 15.7 x 3": {
+      "01_BASE": 0.0,
+      "02_LID": 0.0,
+      "03_CARRIER": 0.0,
+      "04_IMU_SHELF": 0.0
+    }
+  }
+}

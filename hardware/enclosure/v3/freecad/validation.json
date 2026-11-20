@@ -1,0 +1,177 @@
+{
+  "units": "millimetres",
+  "freecad": "1.1.4",
+  "status": "V3 fit prototype from design files; not printed, no measured parts",
+  "parameters_mm": {
+    "board_x": 68.0,
+    "board_y": 46.5,
+    "board_t": 1.6,
+    "board_clearance": 0.6,
+    "wall_short": 2.4,
+    "wall_long": 5.6,
+    "floor": 2.4,
+    "lid": 2.4,
+    "corner": 5.0,
+    "cavity_corner": 3.0,
+    "standoff": 3.5,
+    "headroom": 19.5,
+    "lip_clearance": 0.3,
+    "lip_depth": 2.0,
+    "lip_thickness": 1.5,
+    "usb_cy": 8.05,
+    "usb_cz_above_pcb": 14.0,
+    "usb_width": 16.0,
+    "usb_height": 11.0,
+    "wire_notch_width": 50.0,
+    "wire_notch_bottom_above_pcb": 9.5,
+    "wire_apron": 4.0,
+    "button_hole_d": 9.0,
+    "strap_slot_width": 26.0,
+    "strap_slot_depth": 6.0,
+    "strap_loop_thickness": 6.0,
+    "m3_pilot": 2.6,
+    "m3_clearance": 3.4,
+    "head_recess_d": 6.4,
+    "head_recess_depth": 0.8,
+    "edge_chamfer": 0.6,
+    "engrave_depth": 0.4
+  },
+  "derived_mm": {
+    "body": [
+      74.0,
+      58.9,
+      29.4
+    ],
+    "overall_with_strap_loops": [
+      98.0,
+      58.9,
+      29.4
+    ],
+    "cavity": [
+      69.2,
+      47.7
+    ],
+    "pcb_bottom_z": 5.9,
+    "pcb_top_z": 7.5,
+    "lid_split_z": 27.0,
+    "pcb_holes": [
+      [
+        -30.5,
+        19.55
+      ],
+      [
+        30.5,
+        19.55
+      ],
+      [
+        -30.5,
+        -19.75
+      ],
+      [
+        30.5,
+        -19.75
+      ]
+    ],
+    "lid_screws": [
+      [
+        -31.5,
+        -26.65
+      ],
+      [
+        -31.5,
+        26.65
+      ],
+      [
+        31.5,
+        -26.65
+      ],
+      [
+        31.5,
+        26.65
+      ]
+    ],
+    "boot_hole": [
+      22.2,
+      15.9
+    ],
+    "en_hole": [
+      22.2,
+      0.2
+    ]
+  },
+  "parts": {
+    "base": {
+      "valid": true,
+      "closed": true,
+      "solids": 1,
+      "volume_mm3": 36258.098,
+      "dimensions_mm": [
+        98.0,
+        58.9,
+        27.0
+      ],
+      "faces": 108
+    },
+    "lid": {
+      "valid": true,
+      "closed": true,
+      "solids": 1,
+      "volume_mm3": 11463.831,
+      "dimensions_mm": [
+        74.0,
+        58.9,
+        6.4
+      ],
+      "faces": 269
+    }
+  },
+  "base_vs_lid_overlap_mm3": 0.0,
+  "pcb_model": {
+    "source": "pcb\\v1\\exports\\aisl_glove_carrier_assembled.step",
+    "solids": 254,
+    "bbox_mm": [
+      -34.0,
+      34.0,
+      -23.25,
+      23.25,
+      4.09,
+      23.38
+    ]
+  },
+  "clearances_mm": {
+    "pcb_edge_to_wall": 0.6,
+    "tallest_part_to_lid_underside": 3.62,
+    "lowest_pin_to_floor": 1.69
+  },
+  "pcb_collisions": {
+    "base": {
+      "overlap_mm3": 0.0,
+      "solids_overlapping": []
+    },
+    "lid": {
+      "overlap_mm3": 0.0,
+      "solids_overlapping": []
+    }
+  },
+  "usb_plug_12x8.5_overlap_mm3": {
+    "base": 0.0,
+    "lid": 0.0
+  },
+  "stl": {
+    "01_base.stl": {
+      "triangles": 4196,
+      "solid": true,
+      "non_manifold": false,
+      "self_intersecting": false,
+      "volume_mm3": 36256.371
+    },
+    "02_lid.stl": {
+      "triangles": 7728,
+      "solid": true,
+      "non_manifold": false,
+      "self_intersecting": false,
+      "volume_mm3": 11464.231
+    }
+  },
+  "drawing": "drawings/AISL-A_V3_views.svg"
+}

@@ -1,0 +1,297 @@
+{
+  "units": "millimetres",
+  "status": "V3 fit prototype from PCB design files; not printed, no measured parts",
+  "parameters_mm": {
+    "board_x": 68.0,
+    "board_y": 46.5,
+    "board_t": 1.6,
+    "board_corner": 2.5,
+    "board_clearance": 0.6,
+    "wall_short": 2.4,
+    "wall_long": 5.6,
+    "floor": 2.4,
+    "lid": 2.4,
+    "corner": 5.0,
+    "standoff": 3.5,
+    "headroom": 19.5,
+    "lip_clearance": 0.3,
+    "lip_depth": 2.0,
+    "usb_cy": 8.05,
+    "usb_cz_above_pcb": 14.0,
+    "usb_width": 16.0,
+    "usb_height": 11.0,
+    "wire_notch_width": 50.0,
+    "wire_notch_bottom_above_pcb": 9.5,
+    "wire_apron": 4.0,
+    "button_hole_d": 9.0,
+    "strap_slot_width": 26.0,
+    "strap_slot_depth": 6.0,
+    "strap_loop_thickness": 6.0,
+    "m3_pilot": 2.6,
+    "m3_clearance": 3.4,
+    "mesh_weld_tolerance": 0.003
+  },
+  "derived_mm": {
+    "body": [
+      74.0,
+      58.900000000000006,
+      29.4
+    ],
+    "overall_with_strap_loops": [
+      98.0,
+      58.900000000000006,
+      29.4
+    ],
+    "cavity": [
+      69.2,
+      47.7
+    ],
+    "pcb_bottom_z": 5.9,
+    "pcb_top_z": 7.5,
+    "lid_split_z": 27.0,
+    "pcb_holes": [
+      [
+        -30.5,
+        19.55
+      ],
+      [
+        30.5,
+        19.55
+      ],
+      [
+        -30.5,
+        -19.75
+      ],
+      [
+        30.5,
+        -19.75
+      ]
+    ],
+    "lid_screws": [
+      [
+        -31.5,
+        -26.650000000000002
+      ],
+      [
+        -31.5,
+        26.650000000000002
+      ],
+      [
+        31.5,
+        -26.650000000000002
+      ],
+      [
+        31.5,
+        26.650000000000002
+      ]
+    ],
+    "boot_hole": [
+      22.2,
+      15.9
+    ],
+    "en_hole": [
+      22.2,
+      0.2
+    ]
+  },
+  "collision_solver": "MANIFOLD",
+  "contact_face_separation_for_boolean_mm": 0.02,
+  "parts": {
+    "V3_01_BASE": {
+      "dimensions_mm": [
+        98.0,
+        58.9,
+        27.0
+      ],
+      "vertices": 7572,
+      "faces": 15148,
+      "non_manifold_edges": 0,
+      "boundary_edges": 0,
+      "connected_components": 1,
+      "volume_mm3": 36287.896
+    },
+    "V3_02_LID": {
+      "dimensions_mm": [
+        74.0,
+        58.9,
+        6.4
+      ],
+      "vertices": 2936,
+      "faces": 5892,
+      "non_manifold_edges": 0,
+      "boundary_edges": 0,
+      "connected_components": 1,
+      "volume_mm3": 11505.859
+    }
+  },
+  "assembly_intersections_mm3": {
+    "V3_01_BASE / V3_02_LID": 0.0
+  },
+  "reference_intersections_mm3": {
+    "V3 REF carrier PCB 68 x 46.5": {
+      "V3_01_BASE": 0.0,
+      "V3_02_LID": 0.0
+    },
+    "V3 REF DevKit socket row": {
+      "V3_01_BASE": 0.0,
+      "V3_02_LID": 0.0
+    },
+    "V3 REF socket solder tails": {
+      "V3_01_BASE": 0.0,
+      "V3_02_LID": 0.0
+    },
+    "V3 REF DevKit pin tails": {
+      "V3_01_BASE": 0.0,
+      "V3_02_LID": 0.0
+    },
+    "V3 REF DevKit socket row.001": {
+      "V3_01_BASE": 0.0,
+      "V3_02_LID": 0.0
+    },
+    "V3 REF socket solder tails.001": {
+      "V3_01_BASE": 0.0,
+      "V3_02_LID": 0.0
+    },
+    "V3 REF DevKit pin tails.001": {
+      "V3_01_BASE": 0.0,
+      "V3_02_LID": 0.0
+    },
+    "V3 REF DevKit PCB": {
+      "V3_01_BASE": 0.0,
+      "V3_02_LID": 0.0
+    },
+    "V3 REF ESP32 shield": {
+      "V3_01_BASE": 0.0,
+      "V3_02_LID": 0.0
+    },
+    "V3 REF USB receptacle": {
+      "V3_01_BASE": 0.0,
+      "V3_02_LID": 0.0
+    },
+    "V3 REF DevKit button": {
+      "V3_01_BASE": 0.0,
+      "V3_02_LID": 0.0
+    },
+    "V3 REF DevKit button.001": {
+      "V3_01_BASE": 0.0,
+      "V3_02_LID": 0.0
+    },
+    "V3 REF USB plug overmould 12 x 8.5": {
+      "V3_01_BASE": 0.0,
+      "V3_02_LID": 0.0
+    },
+    "V3 REF MPU6050 module": {
+      "V3_01_BASE": 0.0,
+      "V3_02_LID": 0.0
+    },
+    "V3 REF MPU header pins": {
+      "V3_01_BASE": 0.0,
+      "V3_02_LID": 0.0
+    },
+    "V3 REF JST XH socket J1": {
+      "V3_01_BASE": 0.0,
+      "V3_02_LID": 0.0
+    },
+    "V3 REF JST plug + wire bend J1": {
+      "V3_01_BASE": 0.0,
+      "V3_02_LID": 0.0
+    },
+    "V3 REF resistor R1": {
+      "V3_01_BASE": 0.0,
+      "V3_02_LID": 0.0
+    },
+    "V3 REF capacitor C1": {
+      "V3_01_BASE": 0.0,
+      "V3_02_LID": 0.0
+    },
+    "V3 REF JST XH socket J2": {
+      "V3_01_BASE": 0.0,
+      "V3_02_LID": 0.0
+    },
+    "V3 REF JST plug + wire bend J2": {
+      "V3_01_BASE": 0.0,
+      "V3_02_LID": 0.0
+    },
+    "V3 REF resistor R2": {
+      "V3_01_BASE": 0.0,
+      "V3_02_LID": 0.0
+    },
+    "V3 REF capacitor C2": {
+      "V3_01_BASE": 0.0,
+      "V3_02_LID": 0.0
+    },
+    "V3 REF JST XH socket J3": {
+      "V3_01_BASE": 0.0,
+      "V3_02_LID": 0.0
+    },
+    "V3 REF JST plug + wire bend J3": {
+      "V3_01_BASE": 0.0,
+      "V3_02_LID": 0.0
+    },
+    "V3 REF resistor R3": {
+      "V3_01_BASE": 0.0,
+      "V3_02_LID": 0.0
+    },
+    "V3 REF capacitor C3": {
+      "V3_01_BASE": 0.0,
+      "V3_02_LID": 0.0
+    },
+    "V3 REF JST XH socket J4": {
+      "V3_01_BASE": 0.0,
+      "V3_02_LID": 0.0
+    },
+    "V3 REF JST plug + wire bend J4": {
+      "V3_01_BASE": 0.0,
+      "V3_02_LID": 0.0
+    },
+    "V3 REF resistor R4": {
+      "V3_01_BASE": 0.0,
+      "V3_02_LID": 0.0
+    },
+    "V3 REF capacitor C4": {
+      "V3_01_BASE": 0.0,
+      "V3_02_LID": 0.0
+    },
+    "V3 REF JST XH socket J5": {
+      "V3_01_BASE": 0.0,
+      "V3_02_LID": 0.0
+    },
+    "V3 REF JST plug + wire bend J5": {
+      "V3_01_BASE": 0.0,
+      "V3_02_LID": 0.0
+    },
+    "V3 REF resistor R5": {
+      "V3_01_BASE": 0.0,
+      "V3_02_LID": 0.0
+    },
+    "V3 REF capacitor C5": {
+      "V3_01_BASE": 0.0,
+      "V3_02_LID": 0.0
+    },
+    "V3 REF JST solder tails": {
+      "V3_01_BASE": 0.0,
+      "V3_02_LID": 0.0
+    },
+    "V3 REF 5V header J6": {
+      "V3_01_BASE": 0.0,
+      "V3_02_LID": 0.0
+    },
+    "V3 REF M3 pan head H1": {
+      "V3_01_BASE": 0.0,
+      "V3_02_LID": 0.0
+    },
+    "V3 REF M3 pan head H2": {
+      "V3_01_BASE": 0.0,
+      "V3_02_LID": 0.0
+    },
+    "V3 REF M3 pan head H3": {
+      "V3_01_BASE": 0.0,
+      "V3_02_LID": 0.0
+    },
+    "V3 REF M3 pan head H4": {
+      "V3_01_BASE": 0.0,
+      "V3_02_LID": 0.0
+    }
+  },
+  "largest_intersection_mm3": 0.0
+}

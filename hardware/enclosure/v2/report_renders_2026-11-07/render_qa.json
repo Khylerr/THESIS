@@ -1,0 +1,93 @@
+{
+  "01_assembled.png": {
+    "pixels": [
+      2400,
+      1600
+    ],
+    "visible_bbox": [
+      374,
+      176,
+      2026,
+      1424
+    ],
+    "unclipped": true
+  },
+  "02_exploded.png": {
+    "pixels": [
+      2400,
+      1600
+    ],
+    "visible_bbox": [
+      705,
+      146,
+      1695,
+      1448
+    ],
+    "unclipped": true
+  },
+  "03_internal_layout.png": {
+    "pixels": [
+      2400,
+      1600
+    ],
+    "visible_bbox": [
+      507,
+      182,
+      1893,
+      1397
+    ],
+    "unclipped": true
+  },
+  "04_usb_end.png": {
+    "pixels": [
+      2400,
+      1600
+    ],
+    "visible_bbox": [
+      443,
+      88,
+      2079,
+      1367
+    ],
+    "unclipped": true
+  },
+  "05_imu_end.png": {
+    "pixels": [
+      2400,
+      1600
+    ],
+    "visible_bbox": [
+      321,
+      88,
+      1957,
+      1367
+    ],
+    "unclipped": true
+  },
+  "06_front_orthographic.png": {
+    "pixels": [
+      2400,
+      1600
+    ],
+    "visible_bbox": [
+      277,
+      534,
+      2123,
+      1066
+    ],
+    "unclipped": true
+  },
+  "06_top_orthographic.png": {
+    "pixels": [
+      2400,
+      1600
+    ],
+    "visible_bbox": [
+      277,
+      256,
+      2123,
+      1344
+    ],
+    "unclipped": true
+  }
+}

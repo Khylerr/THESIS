@@ -1,0 +1,10 @@
+Ref,Qty,Value,Part / footprint,Notes
+U1 sockets,2,1x19 female header 2.54 mm,PinSocket_1x19_P2.54mm_Vertical (8.5 mm tall),ESP32-DevKitC-32D (38 pin) plugs in. Have it already.
+U2,1,MPU6050 module (GY-521),1x8 male header 2.54 mm soldered to carrier,Existing module. Sits UNDER the DevKit.
+R1-R5,5,10k 1/4 W 1% axial,R_Axial_DIN0207 7.62 mm pitch,Divider bottom resistor (ADC node to GND)
+C1-C5,5,100 nF ceramic,C_Disc 5.0 mm pitch (2.5 mm parts fit with bent leads),ADC node to GND
+J1-J5,5,JST XH 2-pin vertical header B2B-XH-A,2.5 mm pitch,One per flex sensor
+(cable side),5,JST XHP-2 housing + 10 SXH-001T-P0.6 crimps,or pre-crimped XH 2-pin leads,Solder to the flex sensor leads
+J6,1,1x2 male pin header 2.54 mm,PinHeader_1x02_P2.54mm_Vertical,Optional 5V IN. Leave empty if unused.
+H1-H4,4,M3 screw + standoff,3.2 mm holes,Nylon preferred at the antenna end (H1 and H3)
+PCB,1,68 x 46.5 mm 2-layer 1.6 mm FR4,HASL any colour,Gerbers in fab/aisl_glove_carrier_gerbers.zip

@@ -1,0 +1,10 @@
+** Drc report for aisl_glove_carrier.kicad_pcb **
+** Created on 2026-11-18T21:36:56+0800 **
+
+** Found 0 DRC violations **
+
+** Found 0 unconnected pads **
+
+** Found 0 Footprint errors **
+
+** End of Report **

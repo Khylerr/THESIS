@@ -1,0 +1,14 @@
+{
+    "$schema": "https://schemas.kicad.org/erc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-11-18T21:36:47+0800",
+    "kicad_version": "9.0.7",
+    "sheets": [
+        {
+            "path": "/",
+            "uuid_path": "/bf12f310-9b53-5ac2-a088-04e923ea5122",
+            "violations": []
+        }
+    ],
+    "source": "aisl_glove_carrier.kicad_sch"
+}

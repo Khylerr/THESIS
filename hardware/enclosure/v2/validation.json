@@ -1,0 +1,207 @@
+{
+  "units": "millimetres",
+  "measurement_status": "User supplied 90x60x30; overhang and offsets provisional",
+  "parameters_mm": {
+    "length": 122.0,
+    "width": 86.0,
+    "height": 42.0,
+    "wall": 2.8,
+    "floor": 2.8,
+    "lid": 2.8,
+    "board_length": 90.0,
+    "board_width": 60.0,
+    "assembly_height": 30.0,
+    "board_cx": 8.0,
+    "board_bottom_z": 14.0,
+    "solder_lowest_z": 6.0,
+    "assembly_ceiling_z": 36.0,
+    "usb_width": 26.0,
+    "usb_height": 16.0,
+    "usb_cy": 17.0,
+    "usb_cz": 26.5,
+    "imu_opening_width": 26.0,
+    "imu_opening_height": 14.0,
+    "imu_opening_cy": 17.0,
+    "imu_opening_cz": 25.4,
+    "cable_width": 76.0,
+    "cable_floor_z": 16.0,
+    "cable_roof_z": 27.0,
+    "lip_clearance": 0.3,
+    "mpu_projection_allowance": 16.0,
+    "mesh_weld_tolerance": 0.003,
+    "strap_loop_cx": 66.0,
+    "strap_slot_cx": 67.0,
+    "strap_slot_width": 26.0,
+    "strap_slot_depth": 6.0
+  },
+  "contact_face_separation_for_boolean_mm": 0.02,
+  "collision_solver": "MANIFOLD",
+  "parts": {
+    "V2_01_BASE": {
+      "dimensions_mm": [
+        146.0,
+        86.0,
+        39.2
+      ],
+      "vertices": 3173,
+      "faces": 6366,
+      "non_manifold_edges": 0,
+      "boundary_edges": 0,
+      "connected_components": 1,
+      "volume_mm3": 76314.922
+    },
+    "V2_02_LID": {
+      "dimensions_mm": [
+        122.0,
+        86.0,
+        15.0
+      ],
+      "vertices": 4214,
+      "faces": 8448,
+      "non_manifold_edges": 0,
+      "boundary_edges": 0,
+      "connected_components": 1,
+      "volume_mm3": 31415.702
+    },
+    "V2_03_PERFBOARD_CRADLE": {
+      "dimensions_mm": [
+        96.0,
+        76.8,
+        4.4
+      ],
+      "vertices": 3602,
+      "faces": 7236,
+      "non_manifold_edges": 0,
+      "boundary_edges": 0,
+      "connected_components": 1,
+      "volume_mm3": 3253.809
+    }
+  },
+  "assembly_intersections_mm3": {
+    "V2_01_BASE / V2_02_LID": 0.0,
+    "V2_01_BASE / V2_03_PERFBOARD_CRADLE": 0.0,
+    "V2_02_LID / V2_03_PERFBOARD_CRADLE": 0.0
+  },
+  "reference_intersections_mm3": {
+    "V2 REF assembled perfboard 90 x 60": {
+      "V2_01_BASE": 0.0,
+      "V2_02_LID": 0.0,
+      "V2_03_PERFBOARD_CRADLE": 0.0
+    },
+    "V2 REF female socket": {
+      "V2_01_BASE": 0.0,
+      "V2_02_LID": 0.0,
+      "V2_03_PERFBOARD_CRADLE": 0.0
+    },
+    "V2 REF solder pin envelope": {
+      "V2_01_BASE": 0.0,
+      "V2_02_LID": 0.0,
+      "V2_03_PERFBOARD_CRADLE": 0.0
+    },
+    "V2 REF female socket.001": {
+      "V2_01_BASE": 0.0,
+      "V2_02_LID": 0.0,
+      "V2_03_PERFBOARD_CRADLE": 0.0
+    },
+    "V2 REF solder pin envelope.001": {
+      "V2_01_BASE": 0.0,
+      "V2_02_LID": 0.0,
+      "V2_03_PERFBOARD_CRADLE": 0.0
+    },
+    "V2 REF ESP32 at upper right": {
+      "V2_01_BASE": 0.0,
+      "V2_02_LID": 0.0,
+      "V2_03_PERFBOARD_CRADLE": 0.0
+    },
+    "V2 REF ESP32 shield": {
+      "V2_01_BASE": 0.0,
+      "V2_02_LID": 0.0,
+      "V2_03_PERFBOARD_CRADLE": 0.0
+    },
+    "V2 REF USB connector at board edge": {
+      "V2_01_BASE": 0.0,
+      "V2_02_LID": 0.0,
+      "V2_03_PERFBOARD_CRADLE": 0.0
+    },
+    "V2 REF approximate button": {
+      "V2_01_BASE": 0.0,
+      "V2_02_LID": 0.0,
+      "V2_03_PERFBOARD_CRADLE": 0.0
+    },
+    "V2 REF approximate button.001": {
+      "V2_01_BASE": 0.0,
+      "V2_02_LID": 0.0,
+      "V2_03_PERFBOARD_CRADLE": 0.0
+    },
+    "V2 REF overhanging MPU6050": {
+      "V2_01_BASE": 0.0,
+      "V2_02_LID": 0.0,
+      "V2_03_PERFBOARD_CRADLE": 0.0
+    },
+    "V2 REF MPU IC": {
+      "V2_01_BASE": 0.0,
+      "V2_02_LID": 0.0,
+      "V2_03_PERFBOARD_CRADLE": 0.0
+    },
+    "V2 REF MPU header support": {
+      "V2_01_BASE": 0.0,
+      "V2_02_LID": 0.0,
+      "V2_03_PERFBOARD_CRADLE": 0.0
+    },
+    "V2 REF divider resistor": {
+      "V2_01_BASE": 0.0,
+      "V2_02_LID": 0.0,
+      "V2_03_PERFBOARD_CRADLE": 0.0
+    },
+    "V2 REF divider capacitor": {
+      "V2_01_BASE": 0.0,
+      "V2_02_LID": 0.0,
+      "V2_03_PERFBOARD_CRADLE": 0.0
+    },
+    "V2 REF divider resistor.001": {
+      "V2_01_BASE": 0.0,
+      "V2_02_LID": 0.0,
+      "V2_03_PERFBOARD_CRADLE": 0.0
+    },
+    "V2 REF divider capacitor.001": {
+      "V2_01_BASE": 0.0,
+      "V2_02_LID": 0.0,
+      "V2_03_PERFBOARD_CRADLE": 0.0
+    },
+    "V2 REF divider resistor.002": {
+      "V2_01_BASE": 0.0,
+      "V2_02_LID": 0.0,
+      "V2_03_PERFBOARD_CRADLE": 0.0
+    },
+    "V2 REF divider capacitor.002": {
+      "V2_01_BASE": 0.0,
+      "V2_02_LID": 0.0,
+      "V2_03_PERFBOARD_CRADLE": 0.0
+    },
+    "V2 REF divider resistor.003": {
+      "V2_01_BASE": 0.0,
+      "V2_02_LID": 0.0,
+      "V2_03_PERFBOARD_CRADLE": 0.0
+    },
+    "V2 REF divider capacitor.003": {
+      "V2_01_BASE": 0.0,
+      "V2_02_LID": 0.0,
+      "V2_03_PERFBOARD_CRADLE": 0.0
+    },
+    "V2 REF divider resistor.004": {
+      "V2_01_BASE": 0.0,
+      "V2_02_LID": 0.0,
+      "V2_03_PERFBOARD_CRADLE": 0.0
+    },
+    "V2 REF divider capacitor.004": {
+      "V2_01_BASE": 0.0,
+      "V2_02_LID": 0.0,
+      "V2_03_PERFBOARD_CRADLE": 0.0
+    },
+    "V2 REF USB plug envelope": {
+      "V2_01_BASE": 0.0,
+      "V2_02_LID": 0.0,
+      "V2_03_PERFBOARD_CRADLE": 0.0
+    }
+  }
+}
