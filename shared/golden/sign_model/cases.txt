@@ -1,0 +1,7 @@
+0 random_normal
+1 zeros
+2 desktop_take_hello_no_glove_cal
+3 phone_take_home_glove_calibrated
+4 phone_take_thank_you_glove_calibrated
+5 training_like_means
+6 random_uniform_wide

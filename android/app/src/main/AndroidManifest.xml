@@ -36,5 +36,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <!-- Inference screen: test a trained sign model (opened from the recorder screen) -->
+        <activity
+            android:name=".InferenceActivity"
+            android:exported="false"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait" />
     </application>
 </manifest>

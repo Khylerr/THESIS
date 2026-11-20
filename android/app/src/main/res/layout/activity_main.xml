@@ -6,6 +6,13 @@
     android:orientation="vertical"
     android:padding="8dp">
 
+    <Button
+        android:id="@+id/btnInference"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Test a trained model  →"
+        android:textAllCaps="false" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

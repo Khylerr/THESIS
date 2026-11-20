@@ -24,6 +24,9 @@ dependencies {
 
 tasks.test {
     systemProperty("golden.dir", rootProject.file("../shared/golden").absolutePath)
+    systemProperty("models.dir", rootProject.file("../shared/models").absolutePath)
+    inputs.dir(rootProject.file("../shared/golden"))
+    inputs.dir(rootProject.file("../shared/models"))
     testLogging {
         events("passed", "failed")
         exceptionFormat = TestExceptionFormat.FULL

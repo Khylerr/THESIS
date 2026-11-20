@@ -36,7 +36,20 @@ android {
         targetCompatibility = JavaVersion.VERSION_17
     }
     androidResources {
-        noCompress += "task"
+        noCompress += listOf("task", "aislm")
+    }
+    testOptions {
+        unitTests {
+            isIncludeAndroidResources = true   // Robolectric screen tests (InferenceScreenTest)
+            all {
+                it.systemProperty("golden.dir", rootProject.file("../shared/golden").absolutePath)
+                it.systemProperty("screens.dir", layout.buildDirectory.dir("inference_screens").get().asFile.absolutePath)
+                it.testLogging {
+                    events("passed", "failed")
+                    exceptionFormat = org.gradle.api.tasks.testing.logging.TestExceptionFormat.FULL
+                }
+            }
+        }
     }
 }
 
@@ -50,6 +63,8 @@ kotlin {
  * Bundles the SAME files the Python recorder uses (no copies in this repo, so they cannot
  * drift apart): ../MediaPipe/hand_landmarker.task and ../shared/mediapipe_config.json.
  * At start-up the app checks the model's sha256 against the config, like fslRecorder.py does.
+ * Also the sign classifiers ../shared/models/<id>.aislm (written by models/export_models.py,
+ * checked against PyTorch by :core:test); the Inference screen lists every .aislm asset.
  */
 abstract class SharedAssetsTask : DefaultTask() {
     @get:InputFiles
@@ -75,6 +90,7 @@ val sharedAssets = tasks.register<SharedAssetsTask>("sharedAssets") {
     sources.from(
         rootProject.file("../MediaPipe/hand_landmarker.task"),
         rootProject.file("../shared/mediapipe_config.json"),
+        rootProject.fileTree("../shared/models") { include("*.aislm") },
     )
 }
 
@@ -97,4 +113,9 @@ dependencies {
     implementation("androidx.camera:camera-view:$cameraxVersion")
 
     implementation("com.google.mediapipe:tasks-vision:$mediapipeVersion")
+
+    // JVM tests of the Inference screen (no phone needed): real layout + drawing via Robolectric
+    testImplementation("junit:junit:4.13.2")
+    testImplementation("org.robolectric:robolectric:4.14.1")
+    testImplementation("androidx.test:core:1.6.1")
 }

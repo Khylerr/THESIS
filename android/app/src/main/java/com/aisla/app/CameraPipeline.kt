@@ -65,15 +65,19 @@ class CameraPipeline(
         private set
 
     private var provider: ProcessCameraProvider? = null
+    private var wanted = false               // main thread only
+    private var bound: ImageAnalysis? = null // main thread only
 
+    /** Main thread. Takes the camera for this screen (any other screen's binding is released). */
     fun start(lens: Int = lensFacing) {
         lensFacing = lens
+        wanted = true
         val future = ProcessCameraProvider.getInstance(activity)
         future.addListener({
             try {
                 val p = future.get()
                 provider = p
-                bind(p)
+                if (wanted) bind(p)
             } catch (e: Exception) {
                 lastError = "camera: ${e.message}"
                 Log.e(TAG, "camera start failed", e)
@@ -117,12 +121,28 @@ class CameraPipeline(
 
         p.unbindAll()
         p.bindToLifecycle(activity, selector, analysis)
+        bound = analysis
         lastError = ""
     }
+
+    /** Main thread. Camera off: releases only this screen's own stream. start() turns it on again. */
+    fun stop() {
+        wanted = false
+        val b = bound ?: return
+        bound = null
+        try {
+            provider?.unbind(b)
+        } catch (e: Exception) {
+            Log.w(TAG, "camera stop", e)
+        }
+    }
+
+    val running: Boolean get() = bound != null
 
     fun switchLens() {
         lensFacing = if (lensFacing == CameraSelector.LENS_FACING_FRONT) CameraSelector.LENS_FACING_BACK
         else CameraSelector.LENS_FACING_FRONT
+        if (!wanted) return
         provider?.let {
             try {
                 bind(it)

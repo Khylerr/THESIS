@@ -1,6 +1,7 @@
 package com.aisla.app
 
 import android.Manifest
+import android.content.Intent
 import android.content.pm.PackageManager
 import android.graphics.Color
 import android.os.Build
@@ -107,17 +108,19 @@ class MainActivity : AppCompatActivity() {
     private var planDone = 0
     private var pending: PendingTake? = null
     @Volatile private var rtt: Map<String, Any>? = null
-    private var flexCal: StoredCal? = null
+    /** This session's flex calibration; shared with the Inference screen (AppSession). */
+    private var flexCal: AppSession.StoredCal?
+        get() = AppSession.flexCal
+        set(v) {
+            AppSession.flexCal = v
+        }
     private var calibrating = false
     private var rttStarted = false
 
     private class TakeInfo(
         val signer: String, val sign: String, val rep: Int, val gloveHand: String, val banner: String,
-        val flexCal: StoredCal,
+        val flexCal: AppSession.StoredCal,
     )
-
-    /** Two-point flex calibration of this session + what it is tied to (see flexCalValid). */
-    private class StoredCal(val cal: FlexCalibration, val time: String, val connectionId: Int, val gloveStatus: String)
 
     private class PendingTake(
         val take: TakeInfo, val rows: List<SyncedRow>, val quality: LinkedHashMap<String, Any?>,
@@ -158,7 +161,7 @@ class MainActivity : AppCompatActivity() {
         btnRedo = findViewById(R.id.btnRedo)
 
         store = TakeStore(this)
-        glove = GloveBle(this)
+        glove = AppSession.glove(this)   // one BLE connection for the whole app
         camera = CameraPipeline(this, ::onFrame)
 
         cfg = try {
@@ -197,6 +200,13 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         }
+        findViewById<Button>(R.id.btnInference).setOnClickListener {
+            if (recorder.active || pending != null || calibrating) {
+                showInfo("Finish the current take / calibration first.")
+            } else {
+                startActivity(Intent(this, InferenceActivity::class.java))
+            }
+        }
         btnHand.setOnClickListener {
             val hand = if (btnHand.text == "Right") "Left" else "Right"
             btnHand.text = hand
@@ -224,10 +234,16 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    /** Back from the Inference screen (which took the camera): take the camera again. */
+    override fun onStart() {
+        super.onStart()
+        if (tracker != null) camera.start()
+    }
+
     override fun onDestroy() {
         super.onDestroy()
         ui.removeCallbacksAndMessages(null)
-        glove.stop()
+        if (isFinishing) glove.stop()   // the glove connection belongs to the app (AppSession)
         camera.executor.execute {
             tracker?.close()
             tracker = null
@@ -488,7 +504,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     // ------------------------------------------------------------------ glove calibration (main thread)
-    private fun flexCalValid(c: StoredCal) = c.connectionId == glove.connectionId && c.gloveStatus == glove.calibration
+    private fun flexCalValid(c: AppSession.StoredCal) = c.connectionId == glove.connectionId && c.gloveStatus == glove.calibration
 
     /** Open hand (also re-zeroes the glove) for HOLD_SEC, then a fist; averages the last AVG_SEC of each. */
     private fun runFlexCalibration() {
@@ -507,7 +523,7 @@ class MainActivity : AppCompatActivity() {
                 bigText.text = ""
                 try {
                     val c = FlexCalibration.fromSamples(open, closed)
-                    flexCal = StoredCal(c, LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss")),
+                    flexCal = AppSession.StoredCal(c, LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss")),
                         glove.connectionId, glove.calibration)
                     showInfo("Glove calibrated. Fist minus open (ADC counts): " +
                         (0 until 5).joinToString(" ") { "F${it + 1} ${PyFormat.pyFixed(c.closed[it] - c.open[it], 0)}" })

@@ -2,8 +2,9 @@
 
 Phone version of `MediaPipe/fslRecorder.py`: CameraX + MediaPipe Hands + the BLE glove,
 4 s takes after a 3 s countdown, synced and quality-checked the same way, saved in the
-**same 79-column CSV** (glove hand only; signs are one-handed) plus the normalized features. Live sign recognition comes later,
-once the CNN-BiLSTM is trained (it will consume `Normalizer` output).
+**same 79-column CSV** (glove hand only; signs are one-handed) plus the normalized features.
+Since 2026-11-20 it also has an **Inference screen** that runs the trained CNN-BiLSTM models
+on `Normalizer` output (section "Inference screen" below).
 
 ## Open and run
 
@@ -20,6 +21,33 @@ once the CNN-BiLSTM is trained (it will consume `Normalizer` output).
 
 Takes are saved to `Android/data/com.aisla.app/files/data/<signer>/` (raw, same names as the
 desktop) and `.../files/data_norm/<signer>/` (normalized). Copy them over USB.
+
+## Inference screen (test a trained model)
+
+Recorder screen → **Test a trained model →**. Pick a model on the top card:
+
+| Model | Uses | What the screen turns off |
+|---|---|---|
+| Multimodal, Multimodal (augmented) | camera + MediaPipe, glove, flex calibration | nothing |
+| Vision only | camera + MediaPipe | glove and calibration are not needed and never waited for |
+| Glove only | glove, flex calibration | camera and MediaPipe are off (optional switch turns the camera on, see `HANDOFF.md` 14.2) |
+
+- **Live**: predicts from the last 4 s, every 0.3 s. **4 s take**: countdown, then exactly 4 s
+  (closest to how the training takes were recorded).
+- The models know 7 signs (B, E, F, L, R, U, i-love-you) and have no "nothing" class, so they
+  always answer; under 60 % the screen says "Not sure".
+- A model is a file `shared/models/<id>.aislm`, made from a PyTorch checkpoint by
+  `models/export_models.py` (see `models/README.md`). The app lists every `.aislm` it was built
+  with; adding one needs no app code.
+- The forward pass is plain Kotlin (`core/.../SignModel.kt`), no TFLite. The features come from
+  `core/.../SignWindow.kt`, which runs the recorder's sync + `Normalizer` on the 4 s window.
+
+Tests (no phone needed):
+
+| Gradle task | Checks |
+|---|---|
+| `:core:test` | `SignModelTest`: Kotlin forward pass = real PyTorch (`shared/golden/sign_model`, from `models/make_model_golden.py`), masks, file checks, `SignWindow` = normalized recorded take |
+| `:app:testDebugUnitTest` | `InferenceScreenTest` (Robolectric): the screen opens, lists the four models, turns camera / glove requirements off per model; PNGs in `app/build/inference_screens/` |
 
 ## What is guaranteed to match the desktop recorder
 
